@@ -1,0 +1,40 @@
+package desafio1;
+import java.util.Scanner;
+
+public class Matricula {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o nome do aluno: ");
+        String nome = scanner.nextLine();
+
+        System.out.print("Digite o nome da matéria: ");
+        String materia = scanner.nextLine();
+
+        System.out.print("Digite a primeira nota: ");
+        double primeiraNota = scanner.nextDouble();
+
+        System.out.print("Digite a segunda nota: ");
+        double segundaNota = scanner.nextDouble();
+
+        System.out.print("Digite a terceira nota: ");
+        double terceiraNota = scanner.nextDouble();
+
+        double media = (primeiraNota + segundaNota + terceiraNota) / 3;
+
+        System.out.println("Nome do Aluno: " + nome);
+        System.out.println("Matéria: " + materia);
+        System.out.println("Primeira Nota: " + primeiraNota);
+        System.out.println("Segunda Nota: " + segundaNota);
+        System.out.println("Terceira Nota: " + terceiraNota);
+        System.out.println("Média: " + media);
+
+        if (media >= 6.0) {
+            System.out.println("Situação: Aprovado");
+        } else {
+            System.out.println("Situação: Reprovado");
+        }
+
+        scanner.close();
+    }
+}
